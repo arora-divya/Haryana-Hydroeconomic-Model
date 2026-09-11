@@ -454,33 +454,29 @@ STUDY AREA
 ===================================================== */
 
 .study-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:60px;
+    align-items:center;
+    margin-top:40px;
+}
 
-display:grid;
-
-grid-template-columns:1.3fr 1fr;
-
-gap:60px;
-
-align-items:center;
-
-margin-top:40px;
-
+.study-image{
+    width:100%;
+    min-width:0;
 }
 
 .study-image img{
-
-width:100%;
-
-border-radius:18px;
-
-box-shadow:0 15px 35px rgba(0,0,0,.15);
-
+    display:block;
+    width:100%;
+    height:auto;
+    max-width:100%;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
 }
 
 .study-text p{
-
-margin-bottom:25px;
-
+    margin-bottom:25px;
 }
 
 /* =====================================================
