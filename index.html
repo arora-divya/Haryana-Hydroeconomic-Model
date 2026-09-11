@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hydroeconomic Assessment</title>
+
+<!-- Google Fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+<div class="logo">
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#overview">Overview</a></li>
+
+<li><a href="#study">Study Area</a></li>
+<li><a href="#methodology">methodology</a></li>
+
+<li><a href="#workflow">Workflow</a></li>
+<li><a href="#climate">Climate Analysis</a></li>
+
+<li><a href="#economics">Economic Analysis</a></li>
+
+<li><a href="#optimization">Optimization</a></li>
+
+<li><a href="#watersaving">Water Saving</a></li>
+
+<li><a href="#references">Data Source</a></li>
+</ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+<img src="images/logo_cuh.png" class="logo-left" alt="CUH">
+
+<img src="images/logo_iitr.png" class="logo-right" alt="IIT Roorkee">
+
+<div class="hero-center">
+
+<p class="internship">
+
+SPARK Internship 2026
+
+</p>
+
+<h1>
+
+Hydroeconomic Model Development
+
+<br>
+
+for Haryana
+
+</h1>
+
+<h2>
+
+Crop Switching and Water Saving Analysis
+
+</h2>
+
+<button class="btn" onclick="document.getElementById('overview').scrollIntoView({behavior:'smooth'});">
+
+Explore Project
+
+</button>
+
+</div>
+
+<div class="hero-footer">
+
+<div class="prepared">
+
+
+<p>
+
+<strong>Divya Arora</strong>
+
+<br>
+
+M.Sc. Geoinformatics
+
+<br>
+
+Department of Geography
+
+<br>
+
+Central University of Haryana
+<br>
+<a href="mailto:aroradivya1912@gmail.com">
+    aroradivya1912@gmail.com
+</a>
+</p>
+
+</div>
+
+<div class="guided">
+
+
+<p>
+
+<strong>Dr. Hemant Kumar</strong>
+
+<br>
+
+Assistant Professor
+
+<br>
+
+Department of Civil Engineering
+
+<br>
+
+Indian Institute of Technology Roorkee
+<br>
+<a href="mailto:hemant@ce.iitr.ac.in">
+    hemant@ce.iitr.ac.in
+</a>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+
+<section id="overview">
+<div class="container">
+
+<h2>
+
+Project Overview
+
+</h2>
+
+<p>
+
+Haryana is one of India's leading agricultural states and plays a significant role in national food production. However, intensive cultivation of the rice–wheat cropping system and excessive groundwater extraction have resulted in declining groundwater levels across several districts.
+
+</p>
+
+<p>
+
+This study develops a hydroeconomic optimization framework integrating crop economics, crop water requirements, groundwater availability, and climatic variability to identify sustainable crop diversification strategies across Haryana.
+
+</p>
+
+<p>
+
+The framework evaluates district-wise crop allocation, groundwater stress, profitability, and potential water savings under different yield-loss scenarios (1%, 2%, 5%, and 10%) to support evidence-based agricultural planning and water resource management.
+
+</p>
+
+<div class="overview-cards">
+
+<div class="overview-card">
+
+<h3>Objective</h3>
+
+<p>
+
+Develop a hydroeconomic optimization model for sustainable agricultural planning.
+
+</p>
+
+</div>
+
+<div class="overview-card">
+
+<h3>Study Area</h3>
+
+<p>
+
+All 22 districts of Haryana covering major irrigated agricultural regions.
+
+</p>
+
+</div>
+
+<div class="overview-card">
+
+<h3>Expected Outcome</h3>
+
+<p>
+
+Interactive WebGIS portal for crop diversification and groundwater management.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= STUDY AREA ================= -->
+
+<section id="study">
+
+<div class="container">
+
+<h2>Study Area</h2>
+
+<div class="study-grid">
+
+<div class="study-text">
+
+<p>
+
+The study encompasses all 22 districts of Haryana, located in northwestern India between 27°39′N–30°55′N latitude and 74°28′E–77°36′E longitude. The state covers approximately 44,212 km² and is characterized by a predominantly semi-arid to sub-humid climate.
+
+</p>
+
+<p>
+
+Agriculture is the backbone of Haryana's economy, with the rice–wheat cropping system occupying a major share of cultivated land. Groundwater supplies nearly 65–70% of irrigation requirements, resulting in severe groundwater depletion across several districts.
+
+</p>
+
+<p>
+
+This hydroeconomic assessment evaluates groundwater availability, crop economics, climatic variability, and district-wise water stress to identify sustainable crop diversification strategies.
+
+</p>
+
+</div>
+
+<div class="study-image">
+
+<img src="images/haryana_map.png" alt="Study Area">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= METHODOLOGY ================= -->
+
+<section id="methodology">
+
+<div class="container">
+
+<h2>Data & Methodology</h2>
+
+<p>
+
+The hydroeconomic framework integrates multi-source datasets with optimization techniques to evaluate sustainable crop allocation and groundwater management across Haryana.
+
+</p>
+
+<div class="method-grid">
+
+<div class="method-card">
+
+<h3>Crop Statistics</h3>
+
+<p>
+
+Area, production and yield data (2020–2024) obtained from the Statistical Abstract of Haryana 2024–25 
+
+</p>
+
+</div>
+
+<div class="method-card">
+
+<h3>Climate Data</h3>
+
+<p>
+
+District-wise rainfall and temperature datasets collected from IMD Gridded Rainfall (0.25° NetCDF) and ERA5-Land via Open-Meteo API
+
+</p>
+
+</div>
+
+<div class="method-card">
+
+<h3>Groundwater Data</h3>
+
+<p>
+
+Groundwater availability, demand and water gap collected from Haryana Water Resources Atlas 2025 
+(Annexure III) 
+</p>
+
+</div>
+
+<div class="method-card">
+
+<h3>Crop Water Requirement</h3>
+
+<p>
+
+Values obtained from Integrated Water Resources Action Plan 2025
+</p>
+
+</div>
+
+<div class="method-card">
+
+<h3>Optimization Model</h3>
+
+<p>
+
+Linear Programming model developed in Python using Pyomo to maximize agricultural profit under water constraints.
+
+</p>
+
+</div>
+
+<div class="method-card">
+
+<h3>Water Saving Assessment</h3>
+
+<p>
+
+FAO Yield Response Factor (Ky) approach applied to estimate potential water savings under different yield-loss scenarios.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ANALYSIS WORKFLOW ================= -->
+
+<section id="workflow">
+
+<div class="container">
+
+<h2>Analysis Workflow</h2>
+
+<p class="workflow-intro">
+The hydroeconomic assessment integrates agricultural, climatic, hydrological and economic datasets to identify sustainable crop diversification strategies across Haryana.
+</p>
+
+<div class="workflow-grid">
+
+    <!-- TOP ROW -->
+
+    <div class="step">
+        <div class="icon">🌾</div>
+        <h3>Crop Statistics</h3>
+        <p>Area, Production, Yield & MSP</p>
+    </div>
+
+    <div class="arrow">➜</div>
+
+    <div class="step">
+        <div class="icon">🌦️</div>
+        <h3>Climate Data</h3>
+        <p>Rainfall & Temperature</p>
+    </div>
+
+    <div class="arrow">➜</div>
+
+    <div class="step">
+        <div class="icon">💧</div>
+        <h3>Groundwater Data</h3>
+        <p>Availability, Demand & Gap</p>
+    </div>
+
+    <div class="arrow">➜</div>
+
+    <div class="step">
+        <div class="icon">📖</div>
+        <h3>Crop Water Requirement</h3>
+        <p>Values adopted from published reports</p>
+    </div>
+
+    <!-- SECOND ROW -->
+
+    <div class="empty"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <div class="vertical-arrow">⬇</div>
+
+    <!-- THIRD ROW -->
+
+    <div class="step">
+        <div class="icon">🗺️</div>
+        <h3>Interactive Maps</h3>
+        <p>Leaflet WebGIS Portal</p>
+    </div>
+
+    <div class="arrow-left">⬅</div>
+
+    <div class="step">
+        <div class="icon">📉</div>
+        <h3>Water Saving</h3>
+        <p>FAO-33 Ky Method</p>
+    </div>
+
+    <div class="arrow-left">⬅</div>
+
+    <div class="step">
+        <div class="icon">⚙️</div>
+        <h3>Hydroeconomic Optimization</h3>
+        <p>Linear Programming (Pyomo)</p>
+    </div>
+
+    <div class="arrow-left">⬅</div>
+
+    <div class="step">
+        <div class="icon">💰</div>
+        <h3>Economic Analysis</h3>
+        <p>Cost • MSP • Net Profit</p>
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= RESULTS DASHBOARD ================= -->
+
+<section id="results">
+
+<div class="container">
+
+<h2>Results & Discussion</h2>
+
+<p class="results-intro">
+
+The hydroeconomic assessment combines climate analysis, economic evaluation, optimization modelling and water-saving assessment to identify sustainable crop diversification strategies for Haryana. Click on any analysis below to explore the detailed findings.
+
+</p>
+
+<div class="results-grid">
+
+<a href="#climate" class="result-card">
+
+<div class="result-icon">🌦️</div>
+
+<h3>Climate Analysis</h3>
+
+<p>
+Rainfall–temperature relationship with crop productivity using Pearson and Spearman correlation.
+</p>
+
+</a>
+
+<a href="#economics" class="result-card">
+
+<div class="result-icon">💰</div>
+
+<h3>Economic Analysis</h3>
+
+<p>
+Profit estimation based on crop yield, MSP and cultivation cost under observed and optimized scenarios.
+</p>
+
+</a>
+
+<a href="#optimization" class="result-card">
+
+<div class="result-icon">⚙️</div>
+
+<h3>Hydroeconomic Optimization</h3>
+
+<p>
+Linear Programming model for maximizing profit under groundwater and land constraints.
+</p>
+
+</a>
+
+<a href="#cropswitch" class="result-card">
+
+<div class="result-icon">🌾</div>
+
+<h3>Crop Switching</h3>
+
+<p>
+District-wise recommended crop allocation for improving water-use efficiency.
+</p>
+
+</a>
+
+<a href="#watersaving" class="result-card">
+
+<div class="result-icon">💧</div>
+
+<h3>Water Saving</h3>
+
+<p>
+Potential groundwater savings under 1%, 2%, 5% and 10% allowable yield-loss scenarios.
+</p>
+
+</a>
+
+<a href="#maps" class="result-card">
+
+<div class="result-icon">🗺️</div>
+
+<h3>Interactive Maps</h3>
+
+<p>
+Leaflet-based WebGIS visualization of crop allocation, groundwater stress and water-saving potential.
+</p>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+<!-- =====================================================
+CLIMATE ANALYSIS
+===================================================== -->
+
+<section id="climate">
+
+<div class="container">
+
+<h2>Climate Analysis</h2>
+
+<p class="section-intro">
+
+Climate variability plays a crucial role in determining agricultural productivity across Haryana. To examine the influence of climatic factors on crop yield, a correlation analysis was carried out using district-wise rainfall, mean temperature and yield data for the major crops cultivated in the state. Pearson's correlation coefficient was used to quantify the strength and direction of the relationship between climatic variables and crop productivity.
+
+</p>
+
+<div class="climate-layout">
+
+    <!-- LEFT -->
+
+    <div class="climate-image">
+
+        <img src="images/correlation_heatmap.png"
+             alt="Correlation Heatmap">
+
+        <p class="figure-caption">
+
+            <strong>Figure.</strong> Correlation matrix showing the relationship between rainfall, temperature and crop yield.
+
+        </p>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="climate-summary">
+
+        <h3>Interpretation</h3>
+
+        <p>
+
+The correlation heatmap illustrates the degree of association between climatic variables and crop yield. Positive values indicate that crop productivity generally increases with increasing rainfall or temperature, whereas negative values indicate an inverse relationship.
+
+        </p>
+
+        <hr>
+
+        <h3>Key Findings</h3>
+
+        <ul>
+
+            <li>Rice exhibited a positive relationship with rainfall.</li>
+
+            <li>Wheat showed a negative association with increasing temperature.</li>
+
+            <li>Mustard demonstrated comparatively lower climatic sensitivity.</li>
+
+            <li>Bajra displayed greater resilience under variable climatic conditions.</li>
+
+            <li>The results support crop diversification for climate adaptation.</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+ECONOMIC ANALYSIS
+===================================================== -->
+
+<section id="economics">
+
+<div class="container">
+
+<h2>Economic Analysis</h2>
+
+<p class="section-intro">
+
+The economic assessment was carried out to evaluate the profitability of the existing cropping pattern and compare it with the optimized cropping pattern generated through the hydroeconomic model. Crop-wise net profit was estimated using district-wise yield, Minimum Support Price (MSP), and cost of cultivation data. The optimized profit represents the maximum achievable profit while satisfying land availability and groundwater constraints.
+
+</p>
+
+<div class="economics-grid">
+
+<div class="economics-text">
+
+<h3>Profit Estimation</h3>
+
+<p>
+
+Net profit for each crop was calculated using the following relationship:
+
+</p>
+
+<div class="formula">
+
+Profit = (Yield × MSP) − Cost of Cultivation
+
+</div>
+
+<p>
+
+The observed profit represents the total agricultural profit under the existing cropping pattern, whereas the optimal profit corresponds to the profit obtained after hydroeconomic optimization.
+
+</p>
+
+</div>
+
+<div class="economics-chart">
+
+<img src="images/change_in_profit.png"
+alt="change in Profit">
+
+<p class="figure-caption">
+
+<strong>Figure.</strong> Crop Switching Impacts on Profit
+
+</p>
+
+</div>
+
+</div>
+
+<div class="profit-summary">
+
+<div class="profit-card">
+
+<h3>Observed Profit</h3>
+
+<h1>₹ 85,816.29 Lakh</h1>
+
+<p>Existing cropping pattern</p>
+
+</div>
+
+<div class="profit-card">
+
+<h3>Optimal Profit</h3>
+
+<h1>₹ 90,003.73 Lakh</h1>
+
+<p>Optimized cropping pattern</p>
+
+</div>
+
+<div class="profit-card highlight">
+
+<h3>Profit Increase</h3>
+
+<h1>₹ 4,187.44 Lakh</h1>
+
+<p>≈ 4.88% increase</p>
+
+</div>
+
+</div>
+
+<div class="interpretation">
+
+<h3>Interpretation</h3>
+
+<p>
+
+The optimization results indicate that reallocating crop areas while satisfying groundwater availability and land-use constraints can substantially improve statewide agricultural profitability. The increase in profit demonstrates that sustainable water management and economic benefits can be achieved simultaneously without expanding cultivated land.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+HYDROECONOMIC OPTIMIZATION
+===================================================== -->
+
+<section id="optimization">
+
+<div class="container">
+
+<h2>Hydroeconomic Optimization</h2>
+
+<p class="section-intro">
+
+A district-wise hydroeconomic optimization model was developed to determine the optimal allocation of cultivated area for major crops in Haryana. The model integrates crop economics with groundwater availability to maximize agricultural profit while maintaining sustainable groundwater utilization. Linear Programming (LP) was implemented in Python using the Pyomo optimization framework.
+
+</p>
+
+<!-- ================= OBJECTIVE ================= -->
+
+<div class="objective-box">
+
+<h3>Objective Function</h3>
+
+<p>
+
+The optimization model maximizes the total agricultural profit by allocating cultivated area among different crops while satisfying land and groundwater constraints.
+
+</p>
+
+<div class="equation">
+
+Maximize
+
+<br><br>
+
+Z = Σ Σ Area<sub>d,c</sub> × (Yield<sub>c</sub> × MSP<sub>c</sub> − Cost<sub>c</sub>)
+
+</div>
+
+<p>
+
+where,
+
+</p>
+
+<ul>
+
+<li><strong>Z</strong> = Total agricultural profit (₹)</li>
+
+<li><strong>Area<sub>d,c</sub></strong> = Area allocated to crop <em>c</em> in district <em>d</em></li>
+
+<li><strong>Yield<sub>c</sub></strong> = Crop yield (kg ha⁻¹)</li>
+
+<li><strong>MSP<sub>c</sub></strong> = Minimum Support Price (₹ kg⁻¹)</li>
+
+<li><strong>Cost<sub>c</sub></strong> = Cost of cultivation (₹ ha⁻¹)</li>
+
+</ul>
+
+</div>
+
+<!-- ================= CONSTRAINTS ================= -->
+
+<h3 class="subheading">Model Constraints</h3>
+
+<div class="constraint-grid">
+
+<div class="constraint-card">
+
+<h4>Area Flexibility</h4>
+
+<div class="constraint-equation">
+
+0.95 × Observed Area ≤ Area ≤ 1.05 × Observed Area
+
+</div>
+
+<p>
+
+Crop area in each district was allowed to vary within ±5% of the observed cultivated area.
+
+</p>
+
+</div>
+
+<div class="constraint-card">
+
+<h4>Groundwater Availability</h4>
+
+<div class="constraint-equation">
+
+Σ (Area × Water Requirement) ≤ Available Groundwater
+
+</div>
+
+<p>
+
+Total irrigation water demand was constrained by district-wise groundwater availability.
+
+</p>
+
+</div>
+
+<div class="constraint-card">
+
+<h4>Land Availability</h4>
+
+<div class="constraint-equation">
+
+Σ Area = Σ Observed Area
+
+</div>
+
+<p>
+
+The total cultivated area within each district remained unchanged during optimization.
+
+</p>
+
+</div>
+
+<div class="constraint-card">
+
+<h4>Non-negativity</h4>
+
+<div class="constraint-equation">
+
+Area ≥ 0
+
+</div>
+
+<p>
+
+Negative crop area allocation was not permitted.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ================= WORKFLOW ================= -->
+
+<div class="optimization-flow">
+
+<h3>Optimization Workflow</h3>
+
+<div class="flow">
+
+<div class="flow-box">Observed Cropping Pattern</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-box">Economic & Groundwater Constraints</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-box">Pyomo Linear Programming</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-box">Optimal Crop Allocation</div>
+
+</div>
+<!-- ================= OPTIMIZED CROP SWITCHING ================= -->
+
+<div class="optimization-map">
+
+<h3>District-wise Crop Switching Pattern</h3>
+
+<p class="map-intro">
+
+The hydroeconomic optimization model recommends crop diversification in selected districts to improve groundwater sustainability while maintaining agricultural profitability. The map below illustrates the suggested crop transitions generated by the optimization model.
+
+</p>
+
+<img src="images/crop_switching_map.png"
+     alt="District-wise Crop Switching Map"
+     class="crop-map">
+
+<p class="figure-caption">
+
+<strong>Figure.</strong> District-wise recommended crop switching pattern generated using the hydroeconomic optimization model.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ================= INTERPRETATION ================= -->
+
+<div class="interpretation-box">
+
+<h3>Model Interpretation</h3>
+
+<p>
+
+The optimization framework reallocates crop area within realistic flexibility limits while ensuring that groundwater demand does not exceed district-wise available resources. The resulting optimal cropping pattern maximizes agricultural profitability without expanding cultivated land and forms the basis for crop-switching recommendations and water-saving assessment presented in the following sections.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+INTERACTIVE WATER-STRESS EXPLORER
+Paste this section into index.html, e.g. right after
+the #optimization section, or replace the placeholder
+"#maps" link target with this section's id.
+===================================================== -->
+<section id="maps">
+<div class="container">
+<h2>Interactive Water-Stress Explorer</h2>
+<p class="section-intro">
+Click any district on the map, then use the slider to see how cutting
+available irrigation water changes crop-wise yield loss, water
+withdrawn, and profit -- computed live using the same FAO-33 Ky
+yield-water response equation used in the nonlinear model. This
+recomputes irrigation and yield at each district's already-optimized
+crop mix; it does not re-run the full area-reallocation solve.
+</p>
+
+<div class="map-explorer">
+  <div id="haryana-map"></div>
+
+  <div class="map-panel">
+    <div id="panel-empty">
+      <p>Click a district on the map to begin.</p>
+    </div>
+
+    <div id="panel-content" style="display:none;">
+      <h3 id="panel-district-name"></h3>
+
+      <div class="slider-block">
+        <label for="water-slider">Reduce available irrigation water by:
+          <strong id="slider-value">0%</strong>
+        </label>
+        <input type="range" id="water-slider" min="0" max="60" step="5" value="0">
+      </div>
+
+      <table class="crop-table">
+        <thead>
+          <tr>
+            <th>Crop</th>
+            <th>Area (ha)</th>
+            <th>Yield loss</th>
+            <th>Water withdrawn</th>
+            <th>Profit</th>
+          </tr>
+        </thead>
+        <tbody id="crop-table-body"></tbody>
+      </table>
+
+      <div class="panel-totals">
+        <div>
+          <span class="total-label">Total district profit</span>
+          <span class="total-value" id="panel-total-profit"></span>
+          <span class="total-base" id="panel-total-profit-base"></span>
+        </div>
+        <div>
+          <span class="total-label">Total water withdrawn</span>
+          <span class="total-value" id="panel-total-water"></span>
+          <span class="total-base" id="panel-total-water-base"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</section>
+
+<!-- =====================================================
+YIELD LOSS & WATER SAVING ANALYSIS
+===================================================== -->
+
+<section id="watersaving">
+
+<div class="container">
+
+<h2>Yield Loss and Water Saving Analysis</h2>
+
+<p class="section-intro">
+
+To evaluate the potential for groundwater conservation, a yield-loss analysis was carried out using the FAO-33 Yield Response Factor (Ky) approach. Four permissible yield-loss scenarios (1%, 2%, 5% and 10%) were considered to estimate the corresponding reduction in crop water requirement and identify districts where water savings could be achieved without substantial loss in agricultural productivity.
+
+</p>
+
+<!-- ================= FAO-33 ================= -->
+
+<div class="watersaving-grid">
+
+<div class="watersaving-card">
+
+<h3>FAO-33 Ky Method</h3>
+
+<p>
+
+The relationship between relative crop yield reduction and evapotranspiration deficit is expressed as:
+
+</p>
+
+<div class="equation">
+
+(1 − Ya / Ym) = Ky × (1 − ETa / ETm)
+
+</div>
+
+<ul>
+
+<li><strong>Ya</strong> = Actual Yield</li>
+
+<li><strong>Ym</strong> = Maximum Yield</li>
+
+<li><strong>ETa</strong> = Actual Evapotranspiration</li>
+
+<li><strong>ETm</strong> = Maximum Evapotranspiration</li>
+
+<li><strong>Ky</strong> = Yield Response Factor</li>
+
+</ul>
+
+</div>
+
+<div class="watersaving-card">
+
+<h3>Yield-Loss Scenarios</h3>
+
+<table class="scenario-table">
+
+<tr>
+
+<th>Scenario</th>
+
+<th>Allowable Yield Loss</th>
+
+</tr>
+
+<tr>
+
+<td>Scenario I</td>
+
+<td>1%</td>
+
+</tr>
+
+<tr>
+
+<td>Scenario II</td>
+
+<td>2%</td>
+
+</tr>
+
+<tr>
+
+<td>Scenario III</td>
+
+<td>5%</td>
+
+</tr>
+
+<tr>
+
+<td>Scenario IV</td>
+
+<td>10%</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- ================= MAP ================= -->
+
+<div class="watersaving-map">
+
+<h3>District-wise Water Stress Classification</h3>
+
+<p class="map-intro">
+
+The heatmap illustrates district-wise groundwater stress under different allowable yield-loss scenarios. Districts classified as safe indicate sufficient groundwater savings, whereas stressed districts continue to experience groundwater deficits despite optimization.
+
+</p>
+
+<img src="images/yield_loss_heatmap.png"
+class="yield-map"
+alt="Yield Loss Heatmap">
+
+<p class="figure-caption">
+
+<strong>Figure.</strong> District-wise groundwater stress under 1%, 2%, 5% and 10% allowable yield-loss scenarios.
+
+</p>
+
+</div>
+
+<!-- ================= INTERPRETATION ================= -->
+
+<div class="interpretation-box">
+
+<h3>Key Findings</h3>
+
+<ul>
+
+<li>A core group of 10 districts — Fatehabad, Faridabad, Gurugram, Kurukshetra, Mahendragarh, Kaithal, Panipat, Yamunanagar, Rewari and Karnal — remain classified as Stressed across all four yield-loss scenarios, indicating that yield-loss tolerance alone is insufficient to relieve groundwater stress in these districts.
+</li>
+
+<li>Only three districts, Ambala, Charkhi Dadri and Sirsa, transition from Stressed to Safe, and this shift occurs only at the highest yield-loss level considered (10%).</li>
+
+<li>Bhiwani and Jind show the most responsive improvement, moving from Stressed to Safe at a relatively low yield-loss threshold of 2%.</li>
+
+<li>Nine districts, including Nuh, Jhajjar, Hisar, Palwal, Panchkula, Rohtak and Sonipat, are already classified as Safe at baseline and remain so across all scenarios, requiring no yield-loss intervention.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+DATA SOURCES & REFERENCES
+===================================================== -->
+
+<section id="references">
+
+<div class="container">
+
+<h2>Data Sources & References</h2>
+
+<p class="section-intro">
+
+This study integrates agricultural, climatic, groundwater and geospatial datasets obtained from national and state government agencies together with peer-reviewed scientific literature. These datasets formed the basis for hydroeconomic optimization, crop switching analysis and groundwater sustainability assessment.
+
+</p>
+
+<div class="reference-grid">
+
+<div class="reference-card">
+
+<h3>Primary Data Sources</h3>
+
+<ul>
+
+<li>Statistical Abstract of Haryana (2024–25)</li>
+
+<li>IWRAP Haryana (2025)</li>
+
+<li>Haryana Water Resources Atlas (2025)</li>
+
+<li>India Meteorological Department (IMD)</li>
+
+<li>ERA5-Land Climate Reanalysis</li>
+
+<li>CCSHAU Hisar Crop Water Requirement Data</li>
+
+<li>Survey of India District Boundary Shapefiles</li>
+
+</ul>
+
+</div>
+
+<div class="reference-card">
+
+<h3>Major References</h3>
+
+<ol>
+
+<li>Doorenbos, J., & Kassam, A. H. (1979). <i>Yield Response to Water.</i> FAO Irrigation and Drainage Paper No. 33.</li>
+
+<li>Government of Haryana. (2025). <i>Statistical Abstract of Haryana 2024–25.</i></li>
+
+<li>Government of Haryana. (2025). <i>Integrated Water Resources Action Plan (IWRAP).</i></li>
+
+<li>Haryana Water Resources Authority. (2025). <i>Haryana Water Resources Atlas 2025.</i></li>
+
+<li>India Meteorological Department (IMD). Gridded Rainfall Dataset.</li>
+
+<li>Kumar, H., Zhu, T., & Sankarasubramanian, A. (2023). Understanding the food–energy–water nexus using a regional hydroeconomic optimization framework. <i>Water Resources Research.</i></li>
+
+<li>Ministry of Agriculture & Farmers Welfare. CACP Annual Reports.</li>
+
+<li>Muñoz-Sabater, J., et al. (2021). ERA5-Land: A state-of-the-art global reanalysis dataset. <i>Earth System Science Data.</i></li>
+
+<li>Parveen, B. (2026). Minimum Support Price Policy of Agriculture in Haryana. <i>International Journal of Applied Social Science.</i></li>
+
+<li>Survey of India. District Boundary Shapefiles.</li>
+
+</ol>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= FOOTER ================= -->
+
+<footer>
+    <p>
+        © 2026 Divya Arora. All rights reserved.
+    </p>
+    <p>
+        SPARK Internship | Department of Civil Engineering | Indian Institute of Technology Roorkee
+    </p>
+    <p>
+        Reproduction, redistribution, modification, or commercial use of the website
+        and its contents is not permitted without prior written permission.
+    </p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="map.js"></script>
+</body>
+
+</html>

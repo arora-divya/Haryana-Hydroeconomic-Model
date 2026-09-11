@@ -1,0 +1,1896 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Source Sans 3',sans-serif;
+
+    background:#F7F9FB;
+
+    color:#2C3E50;
+
+    line-height:1.8;
+
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    height:80px;
+
+    background:#0A3244;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 70px;
+
+    z-index:1000;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
+}
+
+.logo{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap: 45px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:13px;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#F2C14E;
+
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+    padding-top:155px;
+
+    background:
+    linear-gradient(rgba(6,35,48,.45),rgba(6,35,48,.60)),
+    url("images/hero.jpg.jpg");
+
+    background-size:cover;
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ---------- Logos ---------- */
+
+.logo-left{
+
+    position:absolute;
+
+    top:105px;
+
+    left:70px;
+
+    width:120px;
+
+}
+
+.logo-right{
+
+    position:absolute;
+
+    top:105px;
+
+    right:70px;
+
+    width:120px;
+
+}
+
+/* ---------- Title ---------- */
+
+.hero-center{
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+    color:white;
+
+    position:relative;
+
+    z-index:50;
+
+}
+
+.internship{
+
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#FFD369;
+
+    margin-bottom:18px;
+
+}
+
+.hero h1{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:72px;
+
+    font-weight:700;
+
+    line-height:1.15;
+
+    margin-bottom:18px;
+
+}
+
+.hero h2{
+
+    font-size:24px;
+
+    font-weight:400;
+
+     max-width:700px;
+
+    margin:0 auto 45px auto;
+
+    line-height:1.4;
+
+
+}
+
+/* ---------- Button ---------- */
+.btn{
+
+    display:inline-block;
+
+    padding:16px 38px;
+
+    background:white;
+
+    color:#0A3244;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+    position:relative;
+
+    z-index:100;
+
+    cursor:pointer;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#F4C542;
+
+    color:#0A3244;
+
+}
+
+/* ---------- Bottom Details ---------- */
+
+.hero-footer{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:70px;
+
+    right:70px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:end;
+
+}
+
+.prepared{
+
+    justify-self:start;
+
+    text-align:left;
+
+    max-width:320px;
+
+    background:rgba(255,255,255,0.18);
+
+    backdrop-filter:blur(10px);
+
+    padding:18px 22px;
+
+    border-radius:15px;
+
+}
+.guided{
+
+    justify-self:end;
+
+    text-align:left;
+
+    max-width:320px;
+
+    background:rgba(255,255,255,0.18);
+
+    backdrop-filter:blur(10px);
+
+    padding:18px 22px;
+
+    border-radius:15px;
+
+}
+
+.hero-footer h3{
+
+    color:#FFD369;
+
+    font-family:'Poppins',sans-serif;
+
+    margin-bottom:8px;
+    text-shadow:0 2px 6px rgba(0,0,0,0.6);
+    font-size:20px;
+
+}
+
+.hero-footer p{
+
+    color:#FFFFFF;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    text-shadow:0 2px 6px rgba(0,0,0,0.5);
+
+}
+.hero-footer a{
+    color:#FFD369;
+    font-size:17px;
+    text-decoration:none;
+}
+
+.hero-footer a:hover{
+    text-decoration:underline;
+    color:#FFFFFF;
+}
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
+
+section{
+
+    padding:100px 11%;
+
+    scroll-margin-top:90px;
+
+}
+.container{
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+section h2{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:46px;
+
+    color:#0A3244;
+
+    margin-bottom:30px;
+
+}
+
+section p{
+
+    font-size:20px;
+
+    text-align:justify;
+
+    margin-bottom:18px;
+
+}
+
+/* =====================================================
+   OVERVIEW CARDS
+===================================================== */
+
+.overview-cards{
+
+    margin-top:55px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.overview-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.overview-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.overview-card h3{
+
+    font-family:'Poppins',sans-serif;
+
+    color:#0A3244;
+
+    margin-bottom:15px;
+
+}
+
+.overview-card p{
+
+    margin:0;
+
+    text-align:left;
+
+    font-size:18px;
+
+}
+/* =====================================================
+STUDY AREA
+===================================================== */
+
+.study-grid{
+
+display:grid;
+
+grid-template-columns:1.3fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+margin-top:40px;
+
+}
+
+.study-image img{
+
+width:100%;
+
+border-radius:18px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.study-text p{
+
+margin-bottom:25px;
+
+}
+
+/* =====================================================
+METHODOLOGY
+===================================================== */
+
+.method-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+margin-top:50px;
+
+}
+
+.method-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.method-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.method-card h3{
+
+font-family:'Poppins',sans-serif;
+
+color:#0A3244;
+
+margin-bottom:15px;
+
+font-size:24px;
+
+}
+
+.method-card p{
+
+font-size:18px;
+
+text-align:left;
+
+}
+
+/* ===========================================
+WORKFLOW
+=========================================== */
+
+#workflow{
+
+padding:110px 8%;
+
+background:#F6F9FC;
+
+}
+
+.workflow-intro{
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+margin-bottom:60px;
+
+font-size:19px;
+
+}
+
+.workflow-grid{
+
+display:grid;
+
+grid-template-columns:220px 60px 220px 60px 220px 60px 220px;
+
+justify-content:center;
+
+row-gap:55px;
+
+align-items:center;
+
+}
+
+/* cards */
+
+.step{
+
+background:white;
+
+padding:30px;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.35s;
+
+min-height:190px;
+
+}
+
+.step:hover{
+
+transform:translateY(-8px);
+
+}
+
+.icon{
+
+font-size:45px;
+
+margin-bottom:15px;
+
+}
+
+.step h3{
+
+font-family:'Poppins',sans-serif;
+
+font-size:21px;
+
+color:#0A3244;
+
+margin-bottom:10px;
+
+}
+
+.step p{
+
+font-size:16px;
+
+line-height:1.5;
+
+margin:0;
+
+text-align:center;
+
+}
+
+/* horizontal arrows */
+
+.arrow,
+
+.arrow-left{
+
+font-size:42px;
+
+text-align:center;
+
+color:#0A3244;
+
+font-weight:bold;
+
+}
+
+/* vertical */
+
+.vertical-arrow{
+
+font-size:60px;
+
+text-align:center;
+
+color:#0A3244;
+
+font-weight:700;
+margin:20px 0;
+
+line-height:1;
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+
+.workflow-grid{
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.arrow,
+
+.arrow-left,
+
+.vertical-arrow{
+
+transform:rotate(90deg);
+
+}
+
+}
+/* =====================================================
+RESULTS DASHBOARD
+===================================================== */
+
+#results{
+
+background:white;
+
+padding:110px 10%;
+
+}
+
+.results-intro{
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+margin-bottom:60px;
+
+font-size:20px;
+
+}
+
+.results-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+margin-top:50px;
+
+}
+
+.result-card{
+
+background:#ffffff;
+
+border-radius:18px;
+
+padding:35px;
+
+text-decoration:none;
+
+color:#2C3E50;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.35s;
+
+border-top:5px solid #0A3244;
+
+}
+
+.result-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 18px 40px rgba(0,0,0,.15);
+
+}
+
+.result-icon{
+
+font-size:48px;
+
+margin-bottom:20px;
+
+}
+
+.result-card h3{
+
+font-family:'Poppins',sans-serif;
+
+font-size:24px;
+
+margin-bottom:15px;
+
+color:#0A3244;
+
+}
+
+.result-card p{
+
+font-size:17px;
+
+line-height:1.7;
+
+text-align:left;
+
+margin:0;
+
+}
+/* =====================================================
+CLIMATE ANALYSIS
+===================================================== */
+
+#climate{
+
+padding:110px 10%;
+
+background:#F8FBFD;
+
+}
+
+.section-intro{
+
+max-width:1100px;
+
+margin:auto;
+
+margin-bottom:50px;
+
+font-size:19px;
+
+text-align:justify;
+
+}
+
+.climate-layout{
+
+display:grid;
+
+grid-template-columns:60% 40%;
+
+gap:40px;
+
+align-items:start;
+
+margin-top:40px;
+
+}
+
+.climate-image{
+
+background:white;
+
+padding:25px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.climate-image img{
+
+width:100%;
+
+display:block;
+
+border-radius:12px;
+
+}
+
+.figure-caption{
+
+margin-top:15px;
+
+font-size:15px;
+
+text-align:center;
+
+color:#666;
+
+}
+
+.climate-summary{
+
+background:white;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+height:100%;
+
+}
+
+.climate-summary h3{
+
+font-family:'Poppins',sans-serif;
+
+color:#0A3244;
+
+margin-bottom:15px;
+
+font-size:24px;
+
+}
+
+.climate-summary p{
+
+font-size:17px;
+
+text-align:justify;
+
+line-height:1.8;
+
+margin-bottom:25px;
+
+}
+
+.climate-summary hr{
+
+border:none;
+
+height:1px;
+
+background:#d9d9d9;
+
+margin:25px 0;
+
+}
+
+.climate-summary ul{
+
+padding-left:22px;
+
+}
+
+.climate-summary li{
+
+margin-bottom:14px;
+
+font-size:17px;
+
+line-height:1.7;
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:1000px){
+
+.climate-layout{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* =====================================================
+ECONOMIC ANALYSIS
+===================================================== */
+
+#economics{
+
+padding:110px 10%;
+
+background:white;
+
+}
+
+.economics-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:45px;
+
+margin-top:50px;
+
+margin-bottom:60px;
+
+align-items:center;
+
+}
+
+.economics-text{
+
+background:#F8FBFD;
+
+padding:35px;
+
+border-radius:18px;
+
+}
+
+.economics-text h3{
+
+font-family:'Poppins',sans-serif;
+
+color:#0A3244;
+
+margin-bottom:20px;
+
+}
+
+.formula{
+
+background:#0A3244;
+
+color:white;
+
+padding:20px;
+
+border-radius:12px;
+
+text-align:center;
+
+font-size:24px;
+
+font-weight:600;
+
+margin:25px 0;
+
+font-family:'Poppins',sans-serif;
+
+}
+
+.economics-chart{
+
+background:white;
+
+padding:25px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.economics-chart img{
+
+width:100%;
+
+border-radius:10px;
+
+}
+
+.profit-summary{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+margin-top:30px;
+
+}
+
+.profit-card{
+
+background:#F8FBFD;
+
+padding:35px;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.profit-card h3{
+
+font-family:'Poppins',sans-serif;
+
+color:#0A3244;
+
+margin-bottom:15px;
+
+}
+
+.profit-card h1{
+
+font-size:34px;
+
+color:#0A3244;
+
+margin-bottom:10px;
+
+}
+
+.highlight{
+
+background:#0A3244;
+
+color:white;
+
+}
+
+.highlight h3,
+
+.highlight h1{
+
+color:white;
+
+}
+
+.interpretation{
+
+margin-top:60px;
+
+background:#F8FBFD;
+
+padding:35px;
+
+border-left:6px solid #0A3244;
+
+border-radius:15px;
+
+}
+
+.interpretation h3{
+
+font-family:'Poppins',sans-serif;
+
+margin-bottom:18px;
+
+color:#0A3244;
+
+}
+
+@media(max-width:1000px){
+
+.economics-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.profit-summary{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* =====================================================
+HYDROECONOMIC OPTIMIZATION
+===================================================== */
+
+#optimization{
+
+padding:110px 10%;
+background:#F8FBFD;
+
+}
+
+.objective-box{
+
+background:#ffffff;
+padding:40px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+margin-top:50px;
+
+}
+
+.objective-box h3{
+
+font-family:'Poppins',sans-serif;
+color:#0A3244;
+margin-bottom:20px;
+
+}
+
+.equation{
+
+margin:30px 0;
+padding:25px;
+background:#0A3244;
+color:white;
+border-radius:12px;
+text-align:center;
+font-size:24px;
+font-weight:600;
+line-height:1.8;
+
+}
+
+.objective-box ul{
+
+padding-left:25px;
+margin-top:20px;
+
+}
+
+.objective-box li{
+
+margin-bottom:12px;
+font-size:17px;
+
+}
+
+.subheading{
+
+margin-top:70px;
+margin-bottom:35px;
+font-family:'Poppins',sans-serif;
+font-size:32px;
+color:#0A3244;
+text-align:center;
+
+}
+
+/* ================= CONSTRAINTS ================= */
+
+.constraint-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+
+}
+
+.constraint-card{
+
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+
+}
+
+.constraint-card:hover{
+
+transform:translateY(-6px);
+
+}
+
+.constraint-card h4{
+
+font-family:'Poppins',sans-serif;
+color:#0A3244;
+margin-bottom:18px;
+
+}
+
+.constraint-equation{
+
+background:#0A3244;
+color:white;
+padding:16px;
+border-radius:10px;
+text-align:center;
+font-size:18px;
+font-weight:600;
+margin-bottom:18px;
+
+}
+
+.constraint-card p{
+
+font-size:16px;
+text-align:left;
+margin:0;
+
+}
+
+/* ================= WORKFLOW ================= */
+
+.optimization-flow{
+
+margin-top:70px;
+text-align:center;
+
+}
+
+.optimization-flow h3{
+
+font-family:'Poppins',sans-serif;
+color:#0A3244;
+margin-bottom:35px;
+
+}
+
+.flow{
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:18px;
+flex-wrap:wrap;
+
+}
+
+.flow-box{
+
+width:220px;
+min-height:110px;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+text-align:center;
+background:white;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+font-weight:600;
+color:#0A3244;
+
+}
+
+.flow-arrow{
+
+font-size:34px;
+font-weight:bold;
+color:#0A3244;
+
+}
+/* =====================================================
+OPTIMIZATION MAP
+===================================================== */
+
+.optimization-map{
+
+margin-top:70px;
+
+background:white;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.optimization-map h3{
+
+font-family:'Poppins',sans-serif;
+
+font-size:30px;
+
+color:#0A3244;
+
+margin-bottom:20px;
+
+text-align:center;
+
+}
+
+.map-intro{
+
+max-width:950px;
+
+margin:0 auto 30px;
+
+text-align:center;
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+.crop-map{
+
+width:100%;
+
+border-radius:12px;
+
+border:1px solid #d9d9d9;
+
+transition:.3s;
+
+}
+
+.crop-map:hover{
+
+transform:scale(1.01);
+
+box-shadow:0 12px 30px rgba(0,0,0,.15);
+
+}
+
+.figure-caption{
+
+margin-top:15px;
+
+text-align:center;
+
+font-size:15px;
+
+color:#666;
+
+font-style:italic;
+
+}
+/* ===== Interactive Water-Stress Explorer ===== */
+.map-explorer{
+  display:grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap:24px;
+  margin-top:30px;
+}
+#haryana-map{
+  width:100%;
+  height:560px;
+  border-radius:12px;
+  box-shadow:0 2px 14px rgba(0,0,0,0.12);
+}
+.map-panel{
+  background:#fafaf7;
+  border:1px solid #e2ddd2;
+  border-radius:12px;
+  padding:22px;
+  min-height:560px;
+}
+#panel-empty{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+  color:#888;
+  font-style:italic;
+}
+#panel-district-name{
+  margin:0 0 14px 0;
+  font-family:'Poppins',sans-serif;
+  color:#1f4e2f;
+}
+.slider-block{
+  margin-bottom:18px;
+}
+.slider-block label{
+  display:block;
+  margin-bottom:8px;
+  font-size:14px;
+}
+.slider-block input[type=range]{
+  width:100%;
+  accent-color:#7a1f2b;
+}
+.crop-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13.5px;
+  margin-bottom:18px;
+}
+.crop-table th{
+  text-align:left;
+  border-bottom:2px solid #ccc;
+  padding:6px 4px;
+  font-weight:600;
+  color:#444;
+}
+.crop-table td{
+  padding:6px 4px;
+  border-bottom:1px solid #eee;
+}
+.crop-dot{
+  display:inline-block;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  margin-right:6px;
+}
+.crop-table td.pos{ color:#1a7a3c; font-weight:600; }
+.crop-table td.neg{ color:#b3261e; font-weight:600; }
+
+.panel-totals{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding-top:12px;
+  border-top:1px solid #ddd;
+}
+.total-label{
+  display:block;
+  font-size:12px;
+  color:#777;
+  text-transform:uppercase;
+  letter-spacing:0.04em;
+}
+.total-value{
+  font-size:20px;
+  font-weight:700;
+  color:#1f4e2f;
+  margin-right:8px;
+}
+.total-base{
+  font-size:12px;
+  color:#999;
+}
+
+@media(max-width:900px){
+  .map-explorer{ grid-template-columns: 1fr; }
+  #haryana-map{ height:400px; }
+}
+
+/* =====================================================
+YIELD LOSS & WATER SAVING
+===================================================== */
+
+#watersaving{
+
+padding:110px 10%;
+
+background:white;
+
+}
+
+.watersaving-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:35px;
+
+margin-top:50px;
+
+}
+
+.watersaving-card{
+
+background:#F8FBFD;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.watersaving-card h3{
+
+font-family:'Poppins',sans-serif;
+
+color:#0A3244;
+
+margin-bottom:20px;
+
+}
+
+.scenario-table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:20px;
+
+}
+
+.scenario-table th{
+
+background:#0A3244;
+
+color:white;
+
+padding:15px;
+
+}
+
+.scenario-table td{
+
+padding:15px;
+
+border:1px solid #ddd;
+
+text-align:center;
+
+}
+
+.watersaving-map{
+
+margin-top:70px;
+
+background:#F8FBFD;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.watersaving-map h3{
+
+font-family:'Poppins',sans-serif;
+
+text-align:center;
+
+color:#0A3244;
+
+margin-bottom:20px;
+
+}
+
+.map-intro{
+
+max-width:950px;
+
+margin:auto;
+
+margin-bottom:30px;
+
+text-align:center;
+
+}
+
+.yield-map{
+
+width:100%;
+
+border-radius:12px;
+
+border:1px solid #ddd;
+
+transition:.3s;
+
+}
+
+.yield-map:hover{
+
+transform:scale(1.01);
+
+}
+
+.figure-caption{
+
+margin-top:15px;
+
+text-align:center;
+
+font-size:15px;
+
+color:#666;
+
+font-style:italic;
+
+}
+
+@media(max-width:900px){
+
+.watersaving-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ================= INTERPRETATION ================= */
+
+.interpretation-box{
+
+margin-top:70px;
+background:white;
+padding:35px;
+border-left:6px solid #0A3244;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.interpretation-box h3{
+
+font-family:'Poppins',sans-serif;
+color:#0A3244;
+margin-bottom:18px;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+.flow{
+
+flex-direction:column;
+
+}
+
+.flow-arrow{
+
+transform:rotate(90deg);
+
+}
+
+}
+/* =====================================================
+REFERENCES
+===================================================== */
+
+#references{
+
+padding:110px 10%;
+
+background:#F8FBFD;
+
+}
+
+.reference-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+margin-top:50px;
+
+}
+
+.reference-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.reference-card h3{
+
+font-family:'Poppins',sans-serif;
+
+color:#0A3244;
+
+margin-bottom:25px;
+
+font-size:28px;
+
+}
+
+.reference-card ul{
+
+padding-left:22px;
+
+}
+
+.reference-card li{
+
+margin-bottom:16px;
+
+line-height:1.8;
+
+font-size:17px;
+
+}
+
+.reference-card ol{
+
+padding-left:22px;
+
+}
+
+.reference-card ol li{
+
+margin-bottom:18px;
+
+text-align:justify;
+
+line-height:1.8;
+
+}
+
+@media(max-width:900px){
+
+.reference-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:#0A3244;
+
+    color:white;
+
+    text-align:center;
+
+    padding:28px;
+
+}
+
+footer p{
+
+    font-size:16px;
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:900px){
+
+nav{
+
+flex-direction:column;
+
+height:auto;
+
+padding:20px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+margin-top:15px;
+
+gap:15px;
+
+}
+
+.logo-left,
+.logo-right{
+
+width:80px;
+
+top:110px;
+
+}
+
+.logo-left{
+
+left:20px;
+
+}
+
+.logo-right{
+
+right:20px;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero h2{
+
+font-size:22px;
+
+}
+
+.hero-footer{
+
+position:relative;
+
+left:0;
+
+right:0;
+
+bottom:0;
+
+margin-top:50px;
+
+padding:0 20px;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.guided{
+
+text-align:left;
+
+}
+
+section{
+
+padding:80px 8%;
+
+}
+
+section h2{
+
+font-size:34px;
+
+}
+
+}
