@@ -1791,102 +1791,618 @@ footer p{
 }
 
 /* =====================================================
-   MOBILE
+   MOBILE RESPONSIVE FIX
 ===================================================== */
 
-@media(max-width:900px){
+@media (max-width: 900px) {
 
-nav{
+    /* ---------- NAVBAR ---------- */
 
-flex-direction:column;
+    nav {
+        position: fixed;
+        height: auto;
+        min-height: 65px;
+        padding: 12px 15px;
+        flex-direction: column;
+        align-items: center;
+    }
 
-height:auto;
+    .logo {
+        font-size: 20px;
+    }
 
-padding:20px;
+    nav ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 14px;
+        margin-top: 10px;
+    }
 
+    nav li {
+        line-height: 1.2;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding: 150px 20px 180px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-left,
+    .logo-right {
+        width: 65px;
+        top: 110px;
+    }
+
+    .logo-left {
+        left: 15px;
+    }
+
+    .logo-right {
+        right: 15px;
+    }
+
+    .hero-center {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .internship {
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 9vw, 48px);
+        line-height: 1.15;
+        margin-bottom: 15px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 13px 28px;
+    }
+
+
+    /* ---------- HERO FOOTER ---------- */
+
+    .hero-footer {
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        bottom: 25px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .prepared,
+    .guided {
+        width: 100%;
+        max-width: none;
+        padding: 12px 15px;
+        border-radius: 12px;
+    }
+
+    .hero-footer p {
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    .hero-footer a {
+        font-size: 13px;
+        word-break: break-word;
+    }
+
+
+    /* ---------- GENERAL SECTIONS ---------- */
+
+    section {
+        padding: 65px 20px;
+        scroll-margin-top: 110px;
+    }
+
+    section h2 {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 22px;
+    }
+
+    section p {
+        font-size: 17px;
+        line-height: 1.65;
+        text-align: left;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* ---------- OVERVIEW ---------- */
+
+    .overview-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 35px;
+    }
+
+    .overview-card {
+        padding: 25px;
+    }
+
+    .overview-card p {
+        font-size: 16px;
+    }
+
+
+    /* ---------- STUDY AREA ---------- */
+
+    .study-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 25px;
+    }
+
+    .study-image {
+        width: 100%;
+    }
+
+    .study-image img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* ---------- METHODOLOGY ---------- */
+
+    .method-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .method-card {
+        padding: 25px;
+    }
+
+    .method-card h3 {
+        font-size: 21px;
+    }
+
+    .method-card p {
+        font-size: 16px;
+    }
+
+
+    /* ---------- WORKFLOW ---------- */
+
+    #workflow {
+        padding: 70px 15px;
+    }
+
+    .workflow-intro {
+        font-size: 17px;
+        text-align: left;
+        margin-bottom: 35px;
+    }
+
+    .workflow-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .step {
+        width: 100%;
+        max-width: 320px;
+        min-height: auto;
+        padding: 25px 20px;
+    }
+
+    .arrow,
+    .arrow-left,
+    .vertical-arrow {
+        transform: rotate(90deg);
+        font-size: 35px;
+        margin: 0;
+    }
+
+    .step h3 {
+        font-size: 19px;
+    }
+
+    .step p {
+        font-size: 15px;
+    }
+
+
+    /* ---------- RESULTS ---------- */
+
+    #results {
+        padding: 70px 20px;
+    }
+
+    .results-intro {
+        font-size: 17px;
+        text-align: left;
+        margin-bottom: 35px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .result-card {
+        padding: 25px;
+    }
+
+    .result-card h3 {
+        font-size: 21px;
+    }
+
+    .result-card p {
+        font-size: 16px;
+    }
+
+
+    /* ---------- CLIMATE ---------- */
+
+    #climate {
+        padding: 70px 20px;
+    }
+
+    .section-intro {
+        font-size: 17px;
+        text-align: left;
+        line-height: 1.65;
+    }
+
+    .climate-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .climate-image {
+        padding: 15px;
+    }
+
+    .climate-summary {
+        padding: 25px;
+    }
+
+    .climate-summary p,
+    .climate-summary li {
+        font-size: 16px;
+    }
+
+
+    /* ---------- ECONOMICS ---------- */
+
+    #economics {
+        padding: 70px 20px;
+    }
+
+    .economics-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .economics-text {
+        padding: 25px;
+    }
+
+    .economics-chart {
+        padding: 15px;
+    }
+
+    .formula {
+        font-size: 18px;
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    .profit-summary {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .profit-card {
+        padding: 25px;
+    }
+
+    .profit-card h1 {
+        font-size: 28px;
+    }
+
+
+    /* ---------- OPTIMIZATION ---------- */
+
+    #optimization {
+        padding: 70px 20px;
+    }
+
+    .objective-box {
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+    .equation {
+        font-size: 17px;
+        padding: 18px 10px;
+        overflow-x: auto;
+    }
+
+    .subheading {
+        font-size: 27px;
+        margin-top: 50px;
+    }
+
+    .constraint-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .constraint-card {
+        padding: 25px;
+    }
+
+    .constraint-equation {
+        font-size: 15px;
+        overflow-x: auto;
+    }
+
+    .optimization-flow {
+        margin-top: 50px;
+    }
+
+    .flow {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .flow-box {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+
+    .optimization-map {
+        padding: 20px 15px;
+        margin-top: 50px;
+    }
+
+    .optimization-map h3 {
+        font-size: 23px;
+    }
+
+
+    /* ---------- INTERACTIVE MAP ---------- */
+
+    .map-explorer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #haryana-map {
+        width: 100%;
+        height: 350px;
+    }
+
+    .map-panel {
+        width: 100%;
+        min-height: auto;
+        padding: 18px;
+        overflow-x: hidden;
+    }
+
+    /*
+       IMPORTANT:
+       The table has 5 columns and cannot fit comfortably
+       on a phone, so allow horizontal scrolling.
+    */
+
+    .crop-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    .crop-table th,
+    .crop-table td {
+        padding: 6px 8px;
+    }
+
+
+    /* ---------- WATER SAVING ---------- */
+
+    #watersaving {
+        padding: 70px 20px;
+    }
+
+    .watersaving-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .watersaving-card {
+        padding: 25px;
+    }
+
+    .scenario-table {
+        font-size: 14px;
+    }
+
+    .scenario-table th,
+    .scenario-table td {
+        padding: 10px 8px;
+    }
+
+    .watersaving-map {
+        padding: 20px 15px;
+        margin-top: 45px;
+    }
+
+    .watersaving-map h3 {
+        font-size: 23px;
+    }
+
+    .yield-map,
+    .crop-map {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* ---------- REFERENCES ---------- */
+
+    #references {
+        padding: 70px 20px;
+    }
+
+    .reference-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .reference-card {
+        padding: 25px;
+    }
+
+    .reference-card h3 {
+        font-size: 23px;
+    }
+
+    .reference-card li {
+        font-size: 16px;
+        text-align: left;
+    }
+
+
+    /* ---------- INTERPRETATION ---------- */
+
+    .interpretation,
+    .interpretation-box {
+        padding: 25px;
+        margin-top: 40px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        padding: 25px 18px;
+    }
+
+    footer p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
 }
 
-nav ul{
 
-flex-wrap:wrap;
+/* =====================================================
+   EXTRA SMALL PHONES
+===================================================== */
 
-justify-content:center;
+@media (max-width: 480px) {
 
-margin-top:15px;
+    nav {
+        padding: 10px;
+    }
 
-gap:15px;
+    nav ul {
+        gap: 6px 10px;
+    }
 
-}
+    nav a {
+        font-size: 10px;
+    }
 
-.logo-left,
-.logo-right{
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
-width:80px;
+    .logo-left,
+    .logo-right {
+        width: 55px;
+        top: 105px;
+    }
 
-top:110px;
+    .logo-left {
+        left: 10px;
+    }
 
-}
+    .logo-right {
+        right: 10px;
+    }
 
-.logo-left{
+    .hero h1 {
+        font-size: 30px;
+    }
 
-left:20px;
+    .hero h2 {
+        font-size: 17px;
+    }
 
-}
+    .internship {
+        font-size: 12px;
+    }
 
-.logo-right{
+    section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
-right:20px;
+    section h2 {
+        font-size: 28px;
+    }
 
-}
+    .hero-footer {
+        left: 10px;
+        right: 10px;
+    }
 
-.hero h1{
+    .prepared,
+    .guided {
+        padding: 10px 12px;
+    }
 
-font-size:42px;
-
-}
-
-.hero h2{
-
-font-size:22px;
-
-}
-
-.hero-footer{
-
-position:relative;
-
-left:0;
-
-right:0;
-
-bottom:0;
-
-margin-top:50px;
-
-padding:0 20px;
-
-flex-direction:column;
-
-gap:25px;
-
-}
-
-.guided{
-
-text-align:left;
-
-}
-
-section{
-
-padding:80px 8%;
-
-}
-
-section h2{
-
-font-size:34px;
-
-}
+    .hero-footer p {
+        font-size: 12px;
+    }
 
 }
